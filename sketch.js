@@ -3,7 +3,7 @@ var foodS,foodStock;
 var addFood;
 var foodObj;
 
-//create feed and lastFed variable here
+//crea aquí las variables feed y lastFed 
 
 
 function preload(){
@@ -24,9 +24,9 @@ function setup() {
   dog.addImage(sadDog);
   dog.scale=0.15;
 
-  //create feed the dog button here
+  //crea aquí el boton Alimentar al perro
 
-  addFood=createButton("Add Food");
+  addFood=createButton("Agregar Alimento");
   addFood.position(800,95);
   addFood.mousePressed(addFoods);
 
@@ -36,16 +36,16 @@ function draw() {
   background(46,139,87);
   foodObj.display();
 
-  //write code to read fedtime value from the database 
+  //escribe el código para leer el valor de tiempo de alimentación de la base de datos
   
  
-  //write code to display text lastFed time here
+  //escribe el código para mostrar el texto lastFed time aquí
 
  
   drawSprites();
 }
 
-//function to read food Stock
+//función para leer la Existencia de alimento
 function readStock(data){
   foodS=data.val();
   foodObj.updateFoodStock(foodS);
@@ -55,11 +55,10 @@ function readStock(data){
 function feedDog(){
   dog.addImage(happyDog);
 
-  //write code here to update food stock and last fed time
-
+  //escribe el código aquí para actualizar las existencia de alimento, y la última vez que se alimentó al perro
 }
 
-//function to add food in stock
+//funcón para agregar alimento al almacén
 function addFoods(){
   foodS++;
   database.ref('/').update({
