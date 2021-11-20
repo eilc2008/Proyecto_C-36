@@ -7,11 +7,22 @@
     <script src="p5.play.js"></script>
 
 <!-- El SDK de Firebase JS principal siempre es obligatorio y se debe figurar primero -->
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
 <!-- TODO: Agrega SDK para los productos de Firebase que quieras usar
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
 <script>
   // Configuración de Firebase de tu aplicación web
+  var firebaseConfig = {
+    apiKey: "AIzaSyAIaZvXJOhk96MtI7KySGV7RAHy8KLP3MU",
+    authDomain: "proyecto-36-b4508.firebaseapp.com",
+    databaseURL: "https://proyecto-36-b4508-default-rtdb.firebaseio.com",
+    projectId: "proyecto-36-b4508",
+    storageBucket: "proyecto-36-b4508.appspot.com",
+    messagingSenderId: "647104470746",
+    appId: "1:647104470746:web:6ffd0e6cdbacaff9464fe3"
+  };
 
   // Inicializar Firebase
   firebase.initializeApp(firebaseConfig);
